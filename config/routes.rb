@@ -1,4 +1,6 @@
 Interview::Application.routes.draw do
+  resources :participators
+
   devise_for :users
   root 'reports#index'
 
