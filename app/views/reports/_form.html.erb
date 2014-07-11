@@ -1,0 +1,68 @@
+<%= form_for(@report, :html => { :class => "form-horizontal" }) do |f| %>
+  <% if @report.errors.any? %>
+    <div class="alert alert-danger alert-dismissable">
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+      <h4><%= pluralize(@report.errors.count, "error") %> prohibited this report from being saved:</h4>
+
+      <ul>
+      <% @report.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.label :name, :class => "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.text_field :name, :class => "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :position, :class => "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.text_field :position, :class => "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :interview_date, :class => "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.date_select :interview_date, :class => "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :detail, :class => "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.text_area :detail, :class => "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :comments, :class => "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.text_area :comments, :class => "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :evaluation, :class => "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.text_field :evaluation, :class => "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :conclusion, :class => "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.text_field :conclusion, :class => "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :resume, :class => "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.file_field :resume, :class => "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <%= f.submit :class => "btn btn-primary" %>
+    </div>
+  </div>
+<% end %>

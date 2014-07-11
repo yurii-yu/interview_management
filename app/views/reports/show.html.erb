@@ -1,0 +1,38 @@
+<div class="page-header">
+  <%= link_to reports_path, :class => 'btn btn-default' do %>
+    <span class="glyphicon glyphicon-list-alt"></span>
+    Back
+  <% end %>
+  <%= link_to edit_report_path(@report), :class => 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-pencil"></span>
+    Edit
+  <% end %>
+  <h1>Show report</h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt>Name:</dt>
+  <dd><%= @report.name %></dd>
+
+  <dt>Position:</dt>
+  <dd><%= @report.position %></dd>
+
+  <dt>Interview date:</dt>
+  <dd><%= @report.interview_date %></dd>
+
+  <dt>Detail:</dt>
+  <dd><%= simple_format(@report.detail.html_safe) %></dd>
+
+  <dt>Comments:</dt>
+  <dd><%= @report.comments %></dd>
+
+  <dt>Evaluation:</dt>
+  <dd><%= @report.evaluation %></dd>
+
+  <dt>Conclusion:</dt>
+  <dd><%= @report.conclusion %></dd>
+
+  <dt>Resume:</dt>
+  <dd><%= @report.resume %></dd>
+
+</dl>
