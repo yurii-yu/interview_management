@@ -26,6 +26,7 @@
   <dd><%= @report.conclusion %></dd>
 
   <dt>简历查看</dt>
-  <dd><%= @report.resume %></dd>
+  <!--<dd><%= link_to @report.resume.file.filename, @report.resume.url %></dd>-->
+  <dd><%= link_to @report.name + '_' + @report.position + '_简历', @report.resume.url %></dd>
 
 </dl>
