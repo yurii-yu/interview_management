@@ -1,5 +1,5 @@
 class ReportsController < ApplicationController
-  before_action :set_report, only: [:show, :edit, :update, :destroy]
+  before_action :set_report, only: [:show, :edit, :update, :destroy, :send_mail]
 
   # GET /reports
   # GET /reports.json
@@ -19,6 +19,13 @@ class ReportsController < ApplicationController
 
   # GET /reports/1/edit
   def edit
+  end
+
+  def send_mail
+    ReportMailer.send_report(@report).deliver
+    respond_to do |format|
+      format.html { redirect_to @report, notice: 'Send successfully' }
+    end
   end
 
   # POST /reports

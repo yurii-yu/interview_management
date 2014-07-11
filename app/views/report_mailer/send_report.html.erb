@@ -1,0 +1,14 @@
+<h2><%= "#{@report.name} #{@report.position} #{@report.interview_date} " %> </h2>
+
+<h3>面试经过</h3>
+<%= simple_format(@report.detail.html_safe) %> 
+
+<h3>面试评价</h3>
+<%= simple_format(@report.comments.html_safe) %>
+
+<h3>候选人评价</h3>
+<%= simple_format(@report.evaluation.html_safe) %>
+
+<h3>面试结论</h3> 
+<%= simple_format(@report.conclusion.html_safe) %>
+

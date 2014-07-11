@@ -1,5 +1,9 @@
 <div class="page-header">
   <h2><%= @report.position %> <%= @report.interview_date %></h2>
+  <%= link_to send_mail_report_path, :method => :post, :class => 'btn btn-default' do %>
+    <span class="glyphicon glyphicon-envelope"></span>
+    Send Report
+  <% end %>
   <%= link_to reports_path, :class => 'btn btn-default' do %>
     <span class="glyphicon glyphicon-list-alt"></span>
     Back
@@ -30,3 +34,5 @@
   <dd><%= link_to @report.name + '_' + @report.position + '_简历', @report.resume.url %></dd>
 
 </dl>
+
+

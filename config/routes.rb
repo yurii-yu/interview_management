@@ -1,5 +1,10 @@
 Interview::Application.routes.draw do
   root 'reports#index'
+
+  resources :reports do
+    member {post :send_mail}    
+  end
+
   resources :reports
 
   # The priority is based upon order of creation: first created -> highest priority.
