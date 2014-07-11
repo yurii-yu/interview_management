@@ -1,4 +1,5 @@
 <div class="page-header">
+  <h2><%= @report.position %> <%= @report.interview_date %></h2>
   <%= link_to reports_path, :class => 'btn btn-default' do %>
     <span class="glyphicon glyphicon-list-alt"></span>
     Back
@@ -7,18 +8,10 @@
     <span class="glyphicon glyphicon-pencil"></span>
     Edit
   <% end %>
-  <h1>Show report</h1>
+  <h2><%= @report.name%></h2>
 </div>
 
 <dl class="dl-horizontal">
-  <dt>Name:</dt>
-  <dd><%= @report.name %></dd>
-
-  <dt>Position:</dt>
-  <dd><%= @report.position %></dd>
-
-  <dt>Interview date:</dt>
-  <dd><%= @report.interview_date %></dd>
 
   <dt>Detail:</dt>
   <dd><%= simple_format(@report.detail.html_safe) %></dd>
