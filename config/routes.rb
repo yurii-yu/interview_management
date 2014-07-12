@@ -1,4 +1,5 @@
 Interview::Application.routes.draw do
+  get "registrations/update"
   resources :participators
 
   devise_for :users
