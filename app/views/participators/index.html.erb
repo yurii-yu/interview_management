@@ -19,7 +19,7 @@
 
     <tbody>
       <%= content_tag_for(:tr, @participators) do |participator| %>
-            <td><%= participator.enabled? ? 'Yes' : 'No' %></td>
+            <td><%= participator.enabled.humanize %></td>
             <td><%= participator.name %></td>
             <td><%= participator.email %></td>
         <td><%= link_to 'Edit', edit_participator_path(participator) %></td>
