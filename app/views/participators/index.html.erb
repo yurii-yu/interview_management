@@ -7,24 +7,21 @@
 </div>
 
 <div class="table-responsive">
-  <table class="table table-striped table-bordered table-hover">
+  <table class="table table-condensed table-striped table-bordered table-hover">
     <thead>
       <tr>
-            <th>Enabled</th>
-            <th>Name</th>
-            <th>Email</th>
-            <th></th>
-        <th></th>
-        <th></th>
+            <th class="text-center">Enabled</th>
+            <th class="text-center">Name</th>
+            <th class="text-center">Email</th>
+            <th colspan='2' class="text-center">Action</th>
       </tr>
     </thead>
 
     <tbody>
       <%= content_tag_for(:tr, @participators) do |participator| %>
-            <td><%= participator.enabled %></td>
+            <td><%= participator.enabled? ? 'Yes' : 'No' %></td>
             <td><%= participator.name %></td>
             <td><%= participator.email %></td>
-            <td><%= link_to 'Show', participator %></td>
         <td><%= link_to 'Edit', edit_participator_path(participator) %></td>
         <td><%= link_to 'Destroy', participator, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       <% end %>
