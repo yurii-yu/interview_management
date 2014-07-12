@@ -28,23 +28,24 @@
         </button>
         <%= link_to "面试反馈管理系统", "/", :class => "navbar-brand" %>
       </div>
+      <% if user_signed_in? %>
       <div class="collapse navbar-collapse">
         <ul class="nav navbar-nav">
 			<li><a href='/participators'>协同面试人</a></li>
 			<li><a href='/reports'>面试反馈</a></li>
 		</ul>
         <ul class="nav navbar-nav navbar-right">
-	    <li><%= link_to current_user.email, '#' %></li>
 
-	  <li class="active">
-        <% if user_signed_in? %>
+	      <li><%= link_to current_user.email, '#' %></li>
+	      <li class="active">
           <%= link_to 'Sign Out', destroy_user_session_path, method:
-          :delete %>
-          <% end %>
+            :delete %>
+
       </li>
 
         </ul>
       </div>
+      <% end %>
     </div>
   </div>
   <div class="container">
