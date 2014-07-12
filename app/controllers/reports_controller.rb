@@ -23,7 +23,7 @@ class ReportsController < ApplicationController
   end
 
   def send_mail
-    ReportMailer.send_report(@report).deliver
+    ReportMailer.send_report(@report, current_user).deliver
     respond_to do |format|
       format.html { redirect_to @report, notice: 'Send successfully' }
     end
