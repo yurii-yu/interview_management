@@ -10,6 +10,7 @@
   <table class="table table-striped table-bordered table-hover">
     <thead>
       <tr>
+            <th>Enabled</th>
             <th>Name</th>
             <th>Email</th>
             <th></th>
@@ -20,6 +21,7 @@
 
     <tbody>
       <%= content_tag_for(:tr, @participators) do |participator| %>
+            <td><%= participator.enabled %></td>
             <td><%= participator.name %></td>
             <td><%= participator.email %></td>
             <td><%= link_to 'Show', participator %></td>
