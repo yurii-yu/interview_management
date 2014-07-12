@@ -153,6 +153,8 @@ gem 'redis-objects'
 gem 'acts_as_list'
 gem 'jquery-ui-rails'
 
+gem 'humanize_boolean'
+
 # gem 'rqrcode'
 # gem 'rqrcode_png'
 # gem 'metro-ui-rails'
