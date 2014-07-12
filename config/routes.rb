@@ -2,7 +2,7 @@ Interview::Application.routes.draw do
   get "registrations/update"
   resources :participators
 
-  devise_for :users
+  devise_for :users, :controllers => {:registrations => "registrations"}
   root 'reports#index'
 
   resources :reports do
