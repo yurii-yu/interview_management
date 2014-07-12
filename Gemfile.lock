@@ -223,6 +223,8 @@ GEM
     httparty (0.13.1)
       json (~> 1.8)
       multi_xml (>= 0.5.2)
+    humanize_boolean (0.0.1)
+      i18n
     i18n (0.6.9)
     ice_nine (0.11.0)
     inflecto (0.0.2)
@@ -508,6 +510,7 @@ DEPENDENCIES
   guard-rspec
   high_voltage (~> 2.1.0)
   hipchat
+  humanize_boolean
   jbuilder (~> 1.2)
   jquery-rails
   jquery-ui-rails
