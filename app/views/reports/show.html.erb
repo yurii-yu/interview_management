@@ -21,7 +21,7 @@
   <dd><%= simple_format(@report.detail.html_safe) %></dd>
 
   <dt>面试评价</dt>
-  <dd><%= @report.comments %></dd>
+  <dd><%= simple_format(@report.comments.html_safe) %></dd>
 
   <dt>候选人评价</dt>
   <dd><%= @report.evaluation %></dd>
